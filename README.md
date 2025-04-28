@@ -1,10 +1,17 @@
-# Pine Script Documentation Crawler
+# crawl4ai Usage Example
 
-This project contains a Python script (`crawler_script.py`) designed to crawl the TradingView Pine Script documentation website and save the content of individual pages as Markdown files.
+This project contains a Python script (`crawler_script.py`) demonstrating how to use the `crawl4ai` library to crawl a website and save the content of individual pages as Markdown files.
 
 ## Purpose
 
-The script uses the `crawl4ai` library to navigate the documentation site starting from a specified URL, extract the main content of each page, and convert it into Markdown format. This can be useful for creating an offline version of the documentation or for processing the content further.
+The script showcases using `crawl4ai` to:
+
+- Navigate a website starting from a specific URL.
+- Employ deep crawling strategies (like BFS) to discover linked pages.
+- Filter crawled URLs based on domain and path patterns.
+- Extract the main content from pages using a scraping strategy.
+- Convert the extracted content into Markdown format.
+- Save the results to a local directory.
 
 ## Setup and Usage
 
@@ -24,8 +31,8 @@ The script uses the `crawl4ai` library to navigate the documentation site starti
     Before running, you can adjust the configuration variables at the top of `crawler_script.py`:
 
     - `start_url`: The initial URL to begin crawling.
-    - `base_doc_path`: The base URL path for the documentation section you want to crawl (used for filtering).
-    - `max_docs`: The maximum number of documentation pages to crawl.
+    - `base_doc_path`: An example variable, often used to define a base URL path for filtering crawled pages.
+    - `max_docs`: The maximum number of pages to crawl.
     - `output_dir`: The directory where the crawled Markdown files will be saved.
 
 4.  **Running the Script:**
@@ -49,7 +56,7 @@ For more detailed information about `crawl4ai` and its capabilities, please refe
 
 ## Output
 
-The script will create the specified `output_dir` (default: `pine-script-docs/v4`) if it doesn't exist and save the crawled documentation pages as `.md` files within that directory. Each file will contain the Markdown content of a single documentation page, prefixed with a comment indicating the source URL.
+The script will create the specified `output_dir` if it doesn't exist and save the crawled pages as `.md` files within that directory. Each file typically contains the Markdown content of a single web page, often prefixed with a comment indicating the source URL.
 
 ## `.gitignore`
 
